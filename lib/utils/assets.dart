@@ -42,6 +42,10 @@ class Assets {
   /// assets/images/lettuce.png
   static const String assetsImagesLettuce = "assets/images/lettuce.png";
 
+  /// Assets for assetsImagesLogo
+  /// assets/images/logo.svg
+  static const String assetsImagesLogo = "assets/images/logo.svg";
+
   /// Assets for assetsImagesMeat
   /// assets/images/meat.png
   static const String assetsImagesMeat = "assets/images/meat.png";
@@ -53,5 +57,9 @@ class Assets {
   /// Assets for assetsImagesPeper
   /// assets/images/peper.png
   static const String assetsImagesPeper = "assets/images/peper.png";
+
+  /// Assets for assetsImagesSearchIcon
+  /// assets/images/search_icon.svg
+  static const String assetsImagesSearchIcon = "assets/images/search_icon.svg";
 }
 
