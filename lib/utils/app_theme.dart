@@ -11,7 +11,7 @@ abstract class AppTheme {
       surface: Colors.white,
       onSurface: Color(0xff06161C),
       onSecondary: Color(0xff979899),
-      primaryContainer: Colors.white,
+      primaryContainer: Color(0xffEBF8EE),
       secondaryContainer: Color(0xffF3F5F7),
     ),
   );
