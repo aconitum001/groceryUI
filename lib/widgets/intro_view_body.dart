@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:gorcery/utils/app_router.dart';
 import 'package:gorcery/widgets/custom_button.dart';
 import 'package:gorcery/widgets/intro_text.dart';
 import 'package:gorcery/widgets/logo_widget.dart';
@@ -28,10 +30,13 @@ class IntroViewBody extends StatelessWidget {
           ),
           Padding(
             padding: EdgeInsets.symmetric(horizontal: width * 0.25),
-            child: const SizedBox(
+            child: SizedBox(
               height: 53,
               child: CustomButton(
                 text: "Shop now",
+                onPressed: () {
+                  Get.offNamed(AppRouter.homeView);
+                },
               ),
             ),
           ),
