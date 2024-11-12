@@ -59,7 +59,7 @@ class UserProfileSection extends StatelessWidget {
         ),
         trailing: Container(
           width: 115,
-          height: 42,
+          height: 44,
           decoration: BoxDecoration(
             color: Theme.of(context).colorScheme.secondaryContainer,
             borderRadius: BorderRadius.circular(70),

@@ -57,11 +57,13 @@ abstract class AppStyles {
     );
   }
 
-  static TextStyle style14medium(BuildContext context, Color? color) {
+  static TextStyle style14medium(BuildContext context, Color? color,
+      {double? height}) {
     return TextStyle(
       fontSize: getResponsiveFontSize(context, fontsize: 14),
       fontWeight: FontWeight.w500,
       color: color,
+      height: height,
     );
   }
 
