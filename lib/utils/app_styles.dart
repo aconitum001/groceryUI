@@ -74,6 +74,14 @@ abstract class AppStyles {
       color: color,
     );
   }
+
+  static TextStyle style32medium(BuildContext context, Color? color) {
+    return TextStyle(
+      fontSize: getResponsiveFontSize(context, fontsize: 32),
+      fontWeight: FontWeight.w500,
+      color: color,
+    );
+  }
 }
 
 double getResponsiveFontSize(BuildContext context, {required double fontsize}) {

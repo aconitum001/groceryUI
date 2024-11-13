@@ -7,7 +7,7 @@ import 'package:gorcery/utils/app_theme.dart';
 void main() {
   runApp(
     DevicePreview(
-      enabled: true,
+      enabled: false,
       builder: (context) {
         return const Grocery();
       },
