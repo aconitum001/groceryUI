@@ -1,41 +1,23 @@
 import 'package:flutter/material.dart';
-import 'package:gorcery/utils/app_styles.dart';
 import 'package:gorcery/utils/assets.dart';
 import 'package:gorcery/widgets/category_widget.dart';
+import 'package:gorcery/widgets/home_header.dart';
 
 class CateogrySection extends StatelessWidget {
   const CateogrySection({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return Column(
+    return const Column(
       children: [
-        Row(
-          children: [
-            Text(
-              "Categories ",
-              style: AppStyles.style18bold(
-                context,
-                Theme.of(context).colorScheme.onSurface,
-              ),
-            ),
-            Image.asset(
-              Assets.assetsImagesFaceSavoringFood,
-            ),
-            const Spacer(),
-            Text(
-              "See all",
-              style: AppStyles.style14medium(
-                context,
-                Theme.of(context).colorScheme.primary,
-              ),
-            ),
-          ],
+        HomeHeader(
+          title: 'Categories',
+          img: Assets.assetsImagesFaceSavoringFood,
         ),
-        const SizedBox(
+        SizedBox(
           height: 16,
         ),
-        const Row(
+        Row(
           children: [
             Expanded(
               flex: 5,
