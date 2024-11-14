@@ -60,6 +60,9 @@ class HomeViewBody extends StatelessWidget {
             height: 24,
           ),
           const BestSellerSection(),
+          const SizedBox(
+            height: 24,
+          ),
         ],
       ),
     );

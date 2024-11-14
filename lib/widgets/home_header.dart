@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:gorcery/utils/app_styles.dart';
+import 'package:gorcery/widgets/tapper.dart';
 
 class HomeHeader extends StatelessWidget {
   const HomeHeader({
@@ -25,11 +26,15 @@ class HomeHeader extends StatelessWidget {
           img,
         ),
         const Spacer(),
-        Text(
-          "See all",
-          style: AppStyles.style14medium(
-            context,
-            Theme.of(context).colorScheme.primary,
+        Tapper(
+          onTap: () {},
+          rippleColor: Theme.of(context).colorScheme.primary.withOpacity(0.2),
+          child: Text(
+            "See all",
+            style: AppStyles.style14medium(
+              context,
+              Theme.of(context).colorScheme.primary,
+            ),
           ),
         ),
       ],
