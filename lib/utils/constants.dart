@@ -1,4 +1,4 @@
-import 'package:gorcery/modules/product_module.dart';
+import 'package:gorcery/models/product_model.dart';
 import 'package:gorcery/utils/assets.dart';
 
 const String FONT_FAMILY = 'DM Sans';

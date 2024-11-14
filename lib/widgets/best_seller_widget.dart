@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:gorcery/modules/product_module.dart';
+import 'package:gorcery/models/product_model.dart';
 import 'package:gorcery/utils/app_styles.dart';
 
 class BestSellerWidget extends StatelessWidget {

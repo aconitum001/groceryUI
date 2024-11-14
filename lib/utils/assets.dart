@@ -6,6 +6,10 @@ class Assets {
   /// assets/images/apple.png
   static const String assetsImagesApple = "assets/images/apple.png";
 
+  /// Assets for assetsImagesArrowBack
+  /// assets/images/arrow_back.svg
+  static const String assetsImagesArrowBack = "assets/images/arrow_back.svg";
+
   /// Assets for assetsImagesAvatar
   /// assets/images/avatar.png
   static const String assetsImagesAvatar = "assets/images/avatar.png";
@@ -34,6 +38,10 @@ class Assets {
   /// assets/images/cheese.png
   static const String assetsImagesCheese = "assets/images/cheese.png";
 
+  /// Assets for assetsImagesCorn
+  /// assets/images/corn.png
+  static const String assetsImagesCorn = "assets/images/corn.png";
+
   /// Assets for assetsImagesFaceSavoringFood
   /// assets/images/face_Savoring_Food.png
   static const String assetsImagesFaceSavoringFood = "assets/images/face_Savoring_Food.png";
@@ -61,6 +69,10 @@ class Assets {
   /// Assets for assetsImagesLogo
   /// assets/images/logo.svg
   static const String assetsImagesLogo = "assets/images/logo.svg";
+
+  /// Assets for assetsImagesMagnifiyingGlass
+  /// assets/images/magnifiying_glass.svg
+  static const String assetsImagesMagnifiyingGlass = "assets/images/magnifiying_glass.svg";
 
   /// Assets for assetsImagesMarker
   /// assets/images/marker.svg

@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:gorcery/utils/app_router.dart';
 import 'package:gorcery/utils/assets.dart';
 import 'package:gorcery/widgets/category_widget.dart';
 import 'package:gorcery/widgets/home_header.dart';
@@ -8,13 +10,13 @@ class CateogrySection extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Column(
+    return Column(
       children: [
-        HomeHeader(
+        const HomeHeader(
           title: 'Categories',
           img: Assets.assetsImagesFaceSavoringFood,
         ),
-        SizedBox(
+        const SizedBox(
           height: 16,
         ),
         Row(
@@ -24,30 +26,38 @@ class CateogrySection extends StatelessWidget {
               child: CategoryWidget(
                 image: Assets.assetsImagesApple,
                 title: "Fruits",
+                onTap: () {
+                  Get.toNamed(
+                    AppRouter.categoryView,
+                  );
+                },
               ),
             ),
-            Spacer(),
+            const Spacer(),
             Expanded(
               flex: 5,
               child: CategoryWidget(
                 image: Assets.assetsImagesBroccoli,
                 title: "Vegetables",
+                onTap: () {},
               ),
             ),
-            Spacer(),
+            const Spacer(),
             Expanded(
               flex: 5,
               child: CategoryWidget(
                 image: Assets.assetsImagesCheese,
                 title: "Diary",
+                onTap: () {},
               ),
             ),
-            Spacer(),
+            const Spacer(),
             Expanded(
               flex: 5,
               child: CategoryWidget(
                 image: Assets.assetsImagesMeat,
                 title: "Meat",
+                onTap: () {},
               ),
             ),
           ],

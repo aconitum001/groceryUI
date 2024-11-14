@@ -14,6 +14,7 @@ abstract class AppTheme {
       primaryContainer: Color(0xffEBF8EE),
       secondaryContainer: Color(0xffF3F5F7),
       tertiaryContainer: Color(0xffE6EAEA),
+      onPrimaryContainer: Color(0xffF1F1F5),
     ),
   );
   static ThemeData darkTheme = ThemeData(
@@ -27,7 +28,8 @@ abstract class AppTheme {
       onSecondary: Color(0xff617986),
       primaryContainer: Color(0xff1A3848),
       secondaryContainer: Color(0xff1A3848),
-      tertiaryContainer: Color(0xff2E414C)
+      tertiaryContainer: Color(0xff2E414C),
+      onPrimaryContainer: Color(0xff203744),
     ),
   );
 }
