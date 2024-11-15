@@ -1,6 +1,6 @@
 import 'package:get/get.dart';
 import 'package:gorcery/views/category_view.dart';
-import 'package:gorcery/views/home_view.dart';
+import 'package:gorcery/views/main_view.dart';
 import 'package:gorcery/views/intro_view.dart';
 import 'package:gorcery/views/product_details_view.dart';
 import 'package:gorcery/views/splash_view.dart';
@@ -25,7 +25,7 @@ abstract class AppRouter {
       ),
       GetPage(
         name: homeView,
-        page: () => const HomeView(),
+        page: () => const MainView(),
         transition: Transition.rightToLeft,
       ),
       GetPage(
