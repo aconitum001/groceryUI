@@ -4,11 +4,22 @@ import 'package:gorcery/utils/app_styles.dart';
 import 'package:gorcery/utils/assets.dart';
 
 class SearchTextField extends StatelessWidget {
-  const SearchTextField({super.key});
+  const SearchTextField({
+    super.key,
+    required this.hint,
+    this.onChanged,
+    this.textEditingController,
+  });
+
+  final String hint;
+  final Function(String)? onChanged;
+  final TextEditingController? textEditingController;
 
   @override
   Widget build(BuildContext context) {
     return TextField(
+      onChanged: onChanged,
+      controller: textEditingController,
       style: AppStyles.style14medium(
         context,
         Theme.of(context).colorScheme.onSurface,
@@ -25,7 +36,7 @@ class SearchTextField extends StatelessWidget {
             BlendMode.srcIn,
           ),
         ),
-        hintText: "Search category",
+        hintText: hint,
         hintStyle: AppStyles.style14medium(
           context,
           Theme.of(context).colorScheme.onSecondary,

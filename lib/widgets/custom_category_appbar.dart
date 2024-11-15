@@ -6,11 +6,14 @@ import 'package:gorcery/widgets/app_bar_button.dart';
 
 class CustomCategoryAppbar extends StatelessWidget {
   const CustomCategoryAppbar({
+    
     super.key,
     required this.title,
+    required this.onTap,
   });
 
   final String title;
+  final VoidCallback onTap;
 
   @override
   Widget build(BuildContext context) {
@@ -33,7 +36,7 @@ class CustomCategoryAppbar extends StatelessWidget {
         const Spacer(),
         AppBarButton(
           icon: Assets.assetsImagesMagnifiyingGlass,
-          onTap: () {},
+          onTap: onTap,
         )
       ],
     );

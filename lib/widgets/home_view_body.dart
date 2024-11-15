@@ -33,7 +33,9 @@ class HomeViewBody extends StatelessWidget {
             ),
             child: SizedBox(
               height: 50,
-              child: SearchTextField(),
+              child: SearchTextField(
+                hint: "Search category",
+              ),
             ),
           ),
           const SizedBox(
