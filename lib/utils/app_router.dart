@@ -36,6 +36,7 @@ abstract class AppRouter {
       GetPage(
         name: AppRouter.prodcutDetailsView,
         page: () => const ProductDetailsView(),
+        transition: Transition.cupertino,
       ),
     ];
   }

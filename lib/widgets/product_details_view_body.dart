@@ -10,21 +10,20 @@ class ProductDetailsViewBody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    double height = MediaQuery.sizeOf(context).height;
     return SingleChildScrollView(
       child: Column(
         children: [
           SizedBox(
-            height: 400,
+            height: 380,
             child: ImageSection(product: product),
           ),
-          SizedBox(
-            height: 450,
-            child: Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 24),
-              child: DescriptionSection(product: product),
-            ),
-          )
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 24),
+            child: DescriptionSection(product: product),
+          ),
+          const SizedBox(
+            height: 24,
+          ),
         ],
       ),
     );
