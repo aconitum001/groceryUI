@@ -18,6 +18,14 @@ class Assets {
   /// assets/images/background_image.png
   static const String assetsImagesBackgroundImage = "assets/images/background_image.png";
 
+  /// Assets for assetsImagesBanana
+  /// assets/images/banana.png
+  static const String assetsImagesBanana = "assets/images/banana.png";
+
+  /// Assets for assetsImagesBlueberries
+  /// assets/images/blueberries.png
+  static const String assetsImagesBlueberries = "assets/images/blueberries.png";
+
   /// Assets for assetsImagesBroccoli
   /// assets/images/broccoli.png
   static const String assetsImagesBroccoli = "assets/images/broccoli.png";
@@ -54,6 +62,10 @@ class Assets {
   /// assets/images/ginger.png
   static const String assetsImagesGinger = "assets/images/ginger.png";
 
+  /// Assets for assetsImagesGrapes
+  /// assets/images/grapes.png
+  static const String assetsImagesGrapes = "assets/images/grapes.png";
+
   /// Assets for assetsImagesIntroBackground
   /// assets/images/Intro_background.png
   static const String assetsImagesIntroBackground = "assets/images/Intro_background.png";
@@ -86,9 +98,21 @@ class Assets {
   /// assets/images/offer_background.png
   static const String assetsImagesOfferBackground = "assets/images/offer_background.png";
 
+  /// Assets for assetsImagesOrange
+  /// assets/images/orange.png
+  static const String assetsImagesOrange = "assets/images/orange.png";
+
   /// Assets for assetsImagesPeper
   /// assets/images/peper.png
   static const String assetsImagesPeper = "assets/images/peper.png";
+
+  /// Assets for assetsImagesPineapple
+  /// assets/images/pineapple.png
+  static const String assetsImagesPineapple = "assets/images/pineapple.png";
+
+  /// Assets for assetsImagesRedApple
+  /// assets/images/red_apple.png
+  static const String assetsImagesRedApple = "assets/images/red_apple.png";
 
   /// Assets for assetsImagesSearchIcon
   /// assets/images/search_icon.svg
@@ -98,8 +122,16 @@ class Assets {
   /// assets/images/Spinach.png
   static const String assetsImagesSpinach = "assets/images/Spinach.png";
 
+  /// Assets for assetsImagesStrawberry
+  /// assets/images/strawberry.png
+  static const String assetsImagesStrawberry = "assets/images/strawberry.png";
+
   /// Assets for assetsImagesTomato
   /// assets/images/tomato.png
   static const String assetsImagesTomato = "assets/images/tomato.png";
+
+  /// Assets for assetsImagesWatermelon
+  /// assets/images/watermelon.png
+  static const String assetsImagesWatermelon = "assets/images/watermelon.png";
 }
 

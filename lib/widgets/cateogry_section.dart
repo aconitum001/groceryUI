@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:gorcery/models/category_arguments_model.dart';
 import 'package:gorcery/utils/app_router.dart';
 import 'package:gorcery/utils/assets.dart';
+import 'package:gorcery/utils/data_dummies.dart';
 import 'package:gorcery/widgets/category_widget.dart';
 import 'package:gorcery/widgets/home_header.dart';
 
@@ -29,6 +31,10 @@ class CateogrySection extends StatelessWidget {
                 onTap: () {
                   Get.toNamed(
                     AppRouter.categoryView,
+                    arguments: CategoryArgumentsModel(
+                      title: "Fruits",
+                      items: fruits,
+                    ),
                   );
                 },
               ),
@@ -39,7 +45,15 @@ class CateogrySection extends StatelessWidget {
               child: CategoryWidget(
                 image: Assets.assetsImagesBroccoli,
                 title: "Vegetables",
-                onTap: () {},
+                onTap: () {
+                  Get.toNamed(
+                    AppRouter.categoryView,
+                    arguments: CategoryArgumentsModel(
+                      title: "Vegetables",
+                      items: vegetables,
+                    ),
+                  );
+                },
               ),
             ),
             const Spacer(),
@@ -48,7 +62,15 @@ class CateogrySection extends StatelessWidget {
               child: CategoryWidget(
                 image: Assets.assetsImagesCheese,
                 title: "Diary",
-                onTap: () {},
+                onTap: () {
+                  Get.toNamed(
+                    AppRouter.categoryView,
+                    arguments: CategoryArgumentsModel(
+                      title: "Diary",
+                      items: [],
+                    ),
+                  );
+                },
               ),
             ),
             const Spacer(),
@@ -57,7 +79,15 @@ class CateogrySection extends StatelessWidget {
               child: CategoryWidget(
                 image: Assets.assetsImagesMeat,
                 title: "Meat",
-                onTap: () {},
+                onTap: () {
+                  Get.toNamed(
+                    AppRouter.categoryView,
+                    arguments: CategoryArgumentsModel(
+                      title: "Meat",
+                      items: [],
+                    ),
+                  );
+                },
               ),
             ),
           ],

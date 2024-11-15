@@ -1,42 +1,46 @@
 import 'package:flutter/material.dart';
-import 'package:gorcery/utils/assets.dart';
+import 'package:gorcery/models/product_model.dart';
 import 'package:gorcery/widgets/categories_grid_view.dart';
 import 'package:gorcery/widgets/custom_category_appbar.dart';
 
 class CategoryViewBody extends StatelessWidget {
-  const CategoryViewBody({super.key});
+  const CategoryViewBody({super.key, required this.items, required this.title});
+
+  final List<Product> items;
+  final String title;
 
   @override
   Widget build(BuildContext context) {
-    return const CustomScrollView(
+    return CustomScrollView(
       slivers: [
         SliverToBoxAdapter(
           child: Column(
             children: [
               Padding(
-                padding: EdgeInsets.only(
+                padding: const EdgeInsets.only(
                   top: 24,
                   right: 24,
                   left: 24,
                 ),
                 child: CustomCategoryAppbar(
-                  title: "Vegetables",
-                  icon: Assets.assetsImagesCorn,
+                  title: title,
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 32,
               ),
             ],
           ),
         ),
         SliverPadding(
-          padding: EdgeInsets.symmetric(
+          padding: const EdgeInsets.symmetric(
             horizontal: 24,
           ),
-          sliver: CategoriesGridView(),
+          sliver: CategoriesGridView(
+            items: items,
+          ),
         ),
-        SliverToBoxAdapter(
+        const SliverToBoxAdapter(
           child: SizedBox(
             height: 32,
           ),

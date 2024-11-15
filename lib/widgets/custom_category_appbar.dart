@@ -8,10 +8,9 @@ class CustomCategoryAppbar extends StatelessWidget {
   const CustomCategoryAppbar({
     super.key,
     required this.title,
-    required this.icon,
   });
 
-  final String title, icon;
+  final String title;
 
   @override
   Widget build(BuildContext context) {
@@ -31,10 +30,6 @@ class CustomCategoryAppbar extends StatelessWidget {
             Theme.of(context).colorScheme.onSurface,
           ),
         ),
-        const SizedBox(
-          width: 3,
-        ),
-        Image.asset(icon),
         const Spacer(),
         AppBarButton(
           icon: Assets.assetsImagesMagnifiyingGlass,
