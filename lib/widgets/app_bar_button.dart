@@ -7,10 +7,12 @@ class AppBarButton extends StatelessWidget {
     super.key,
     required this.icon,
     required this.onTap,
+    this.color,
   });
 
   final String icon;
   final VoidCallback onTap;
+  final Color? color;
 
   @override
   Widget build(BuildContext context) {
@@ -19,6 +21,7 @@ class AppBarButton extends StatelessWidget {
       height: 44,
       decoration: BoxDecoration(
         shape: BoxShape.circle,
+        color: color,
         border: Border.all(
           color: Theme.of(context).colorScheme.onPrimaryContainer,
         ),

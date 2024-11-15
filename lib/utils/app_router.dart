@@ -34,9 +34,8 @@ abstract class AppRouter {
         transition: Transition.size,
       ),
       GetPage(
-        name: prodcutDetailsView,
+        name: AppRouter.prodcutDetailsView,
         page: () => const ProductDetailsView(),
-        transition: Transition.size,
       ),
     ];
   }

@@ -3,6 +3,7 @@ import 'package:get/get.dart';
 import 'package:gorcery/models/product_model.dart';
 import 'package:gorcery/utils/app_router.dart';
 import 'package:gorcery/utils/app_styles.dart';
+import 'package:gorcery/widgets/custom_icon_button.dart';
 
 class ProductDisplayWidget extends StatelessWidget {
   const ProductDisplayWidget({
@@ -71,20 +72,13 @@ class ProductDisplayWidget extends StatelessWidget {
                   ),
                 ),
                 const Spacer(),
-                SizedBox(
+                const SizedBox(
                   height: 36,
                   width: 36,
-                  child: IconButton(
-                    onPressed: () {},
-                    style: IconButton.styleFrom(
-                      backgroundColor: Theme.of(context).colorScheme.primary,
-                    ),
-                    icon: const FittedBox(
-                      fit: BoxFit.scaleDown,
-                      child: Icon(
-                        Icons.add,
-                        color: Colors.white,
-                      ),
+                  child: CustomIconButton(
+                    icon: Icon(
+                      Icons.add,
+                      color: Colors.white,
                     ),
                   ),
                 )
