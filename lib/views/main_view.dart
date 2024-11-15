@@ -1,12 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:get/get.dart';
+import 'package:gorcery/utils/app_router.dart';
 import 'package:gorcery/utils/app_styles.dart';
 import 'package:gorcery/utils/assets.dart';
 import 'package:gorcery/views/calender_view.dart';
 import 'package:gorcery/views/home_view.dart';
 import 'package:gorcery/views/products_view.dart';
 import 'package:gorcery/views/profile_view.dart';
-import 'package:gorcery/widgets/home_view_body.dart';
 
 class MainView extends StatefulWidget {
   const MainView({super.key});
@@ -43,7 +44,9 @@ class _MainViewState extends State<MainView> {
             height: 44,
             width: 44,
             child: FloatingActionButton(
-              onPressed: () {},
+              onPressed: () {
+                Get.toNamed(AppRouter.cartView);
+              },
               backgroundColor: Theme.of(context).colorScheme.primary,
               shape: const CircleBorder(),
               child: SvgPicture.asset(
@@ -91,13 +94,17 @@ class _MainViewState extends State<MainView> {
                     currentTab = 0;
                   });
                 },
-                child: SvgPicture.asset(
-                  Assets.assetsImagesHome,
-                  colorFilter: ColorFilter.mode(
-                    currentTab == 0
-                        ? Theme.of(context).colorScheme.onSurface
-                        : Theme.of(context).colorScheme.onSecondary,
-                    BlendMode.srcIn,
+                child: AnimatedSwitcher(
+                  duration: const Duration(milliseconds: 300),
+                  child: SvgPicture.asset(
+                    Assets.assetsImagesHome,
+                    key: ValueKey(currentTab == 0), // Unique key for animation
+                    colorFilter: ColorFilter.mode(
+                      currentTab == 0
+                          ? Theme.of(context).colorScheme.onSurface
+                          : Theme.of(context).colorScheme.onSecondary,
+                      BlendMode.srcIn,
+                    ),
                   ),
                 ),
               ),
@@ -110,13 +117,17 @@ class _MainViewState extends State<MainView> {
                     currentTab = 1;
                   });
                 },
-                child: SvgPicture.asset(
-                  Assets.assetsImagesCat,
-                  colorFilter: ColorFilter.mode(
-                    currentTab == 1
-                        ? Theme.of(context).colorScheme.onSurface
-                        : Theme.of(context).colorScheme.onSecondary,
-                    BlendMode.srcIn,
+                child: AnimatedSwitcher(
+                  duration: const Duration(milliseconds: 300),
+                  child: SvgPicture.asset(
+                    Assets.assetsImagesCat,
+                    key: ValueKey(currentTab == 1), // Unique key for animation
+                    colorFilter: ColorFilter.mode(
+                      currentTab == 1
+                          ? Theme.of(context).colorScheme.onSurface
+                          : Theme.of(context).colorScheme.onSecondary,
+                      BlendMode.srcIn,
+                    ),
                   ),
                 ),
               ),
@@ -130,13 +141,17 @@ class _MainViewState extends State<MainView> {
                     currentTab = 2;
                   });
                 },
-                child: SvgPicture.asset(
-                  Assets.assetsImagesCalenderIcon,
-                  colorFilter: ColorFilter.mode(
-                    currentTab == 2
-                        ? Theme.of(context).colorScheme.onSurface
-                        : Theme.of(context).colorScheme.onSecondary,
-                    BlendMode.srcIn,
+                child: AnimatedSwitcher(
+                  duration: const Duration(milliseconds: 400),
+                  child: SvgPicture.asset(
+                    Assets.assetsImagesCalenderIcon,
+                    key: ValueKey(currentTab == 2), // Unique key for animation
+                    colorFilter: ColorFilter.mode(
+                      currentTab == 2
+                          ? Theme.of(context).colorScheme.onSurface
+                          : Theme.of(context).colorScheme.onSecondary,
+                      BlendMode.srcIn,
+                    ),
                   ),
                 ),
               ),
@@ -149,13 +164,17 @@ class _MainViewState extends State<MainView> {
                     currentTab = 3;
                   });
                 },
-                child: SvgPicture.asset(
-                  Assets.assetsImagesPersonIcon,
-                  colorFilter: ColorFilter.mode(
-                    currentTab == 3
-                        ? Theme.of(context).colorScheme.onSurface
-                        : Theme.of(context).colorScheme.onSecondary,
-                    BlendMode.srcIn,
+                child: AnimatedSwitcher(
+                  duration: const Duration(milliseconds: 300),
+                  child: SvgPicture.asset(
+                    Assets.assetsImagesPersonIcon,
+                    key: ValueKey(currentTab == 3), // Unique key for animation
+                    colorFilter: ColorFilter.mode(
+                      currentTab == 3
+                          ? Theme.of(context).colorScheme.onSurface
+                          : Theme.of(context).colorScheme.onSecondary,
+                      BlendMode.srcIn,
+                    ),
                   ),
                 ),
               ),

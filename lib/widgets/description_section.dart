@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:gorcery/controllers/cart_controller.dart';
+import 'package:gorcery/controllers/product_counter_controller.dart';
 import 'package:gorcery/models/product_model.dart';
 import 'package:gorcery/utils/app_styles.dart';
 import 'package:gorcery/widgets/custom_button.dart';
@@ -6,16 +9,28 @@ import 'package:gorcery/widgets/product_info_grid_view.dart';
 import 'package:gorcery/widgets/title_and_counter_widget.dart';
 
 class DescriptionSection extends StatelessWidget {
-  const DescriptionSection({super.key, required this.product});
+  DescriptionSection({super.key, required this.product});
 
   final Product product;
+
+  final CartController cartController = Get.find();
+
+  final ProductCounterController productCounterController =
+      Get.put(ProductCounterController());
 
   @override
   Widget build(BuildContext context) {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.stretch,
       children: [
-        TitleAndCounterWidget(product: product),
+        Obx(
+          () => TitleAndCounterWidget(
+            product: product,
+            decrement: productCounterController.decrementCounter,
+            increment: productCounterController.incrementCounter,
+            counter: productCounterController.counter.value,
+          ),
+        ),
         const SizedBox(
           height: 6,
         ),
@@ -47,7 +62,29 @@ class DescriptionSection extends StatelessWidget {
           height: 53,
           child: CustomButton(
             text: "Add to cart",
-            onPressed: () {},
+            onPressed: () {
+              if (productCounterController.counter.value > 0) {
+                cartController.addItem(
+                  product,
+                  count: productCounterController.counter.value,
+                );
+                Get.snackbar(
+                  "Products Added to Cart!",
+                  "${productCounterController.counter.value} item of ${product.title} has been successfully added to your cart. Keep shopping or proceed to checkout!", // Message content
+                  snackPosition: SnackPosition.TOP,
+                  backgroundColor: Theme.of(context).colorScheme.primary,
+                  colorText: Colors.white,
+                  borderRadius: 8,
+                  margin: const EdgeInsets.all(10),
+                  duration: const Duration(seconds: 3),
+                  icon: const Icon(
+                    Icons.check_circle_outlined,
+                    color: Colors.white,
+                  ),
+                );
+                productCounterController.counter.value = 1;
+              }
+            },
           ),
         )
       ],

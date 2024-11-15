@@ -3,8 +3,10 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:gorcery/utils/app_router.dart';
 import 'package:gorcery/utils/app_theme.dart';
+import 'package:gorcery/utils/utils.dart';
 
 void main() {
+  registerControllers();
   runApp(
     DevicePreview(
       enabled: false,

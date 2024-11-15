@@ -1,4 +1,5 @@
 import 'package:get/get.dart';
+import 'package:gorcery/views/cart_view.dart';
 import 'package:gorcery/views/category_view.dart';
 import 'package:gorcery/views/main_view.dart';
 import 'package:gorcery/views/intro_view.dart';
@@ -11,6 +12,7 @@ abstract class AppRouter {
   static const String homeView = "/home";
   static const String categoryView = "/category";
   static const String prodcutDetailsView = "/productDetails";
+  static const String cartView = "/cart";
 
   static List<GetPage<dynamic>>? getViews() {
     return [
@@ -38,6 +40,11 @@ abstract class AppRouter {
         page: () => const ProductDetailsView(),
         transition: Transition.cupertino,
       ),
+      GetPage(
+        name: cartView,
+        page: () => const CartView(),
+        transition: Transition.zoom,
+      )
     ];
   }
 }

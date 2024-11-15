@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+
 import 'package:gorcery/models/product_model.dart';
 import 'package:gorcery/utils/app_styles.dart';
 import 'package:gorcery/widgets/custom_icon_button.dart';
@@ -7,9 +8,14 @@ class TitleAndCounterWidget extends StatelessWidget {
   const TitleAndCounterWidget({
     super.key,
     required this.product,
+    required this.increment,
+    required this.decrement,
+    required this.counter,
   });
 
   final Product product;
+  final VoidCallback increment, decrement;
+  final int counter;
 
   @override
   Widget build(BuildContext context) {
@@ -41,13 +47,16 @@ class TitleAndCounterWidget extends StatelessWidget {
               Icons.remove,
               color: Theme.of(context).colorScheme.onSecondary,
             ),
+            onTap: () {
+              decrement();
+            },
           ),
         ),
         const Spacer(
           flex: 1,
         ),
         Text(
-          "4",
+          counter.toString(),
           style: AppStyles.style18bold(
             context,
             Theme.of(context).colorScheme.onSurface,
@@ -56,14 +65,17 @@ class TitleAndCounterWidget extends StatelessWidget {
         const Spacer(
           flex: 1,
         ),
-        const SizedBox(
+        SizedBox(
           width: 36,
           height: 36,
           child: CustomIconButton(
-            icon: Icon(
+            icon: const Icon(
               Icons.add,
               color: Colors.white,
             ),
+            onTap: () {
+              increment();
+            },
           ),
         ),
       ],
