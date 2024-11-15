@@ -23,16 +23,15 @@ class AppBarButton extends StatelessWidget {
           color: Theme.of(context).colorScheme.onPrimaryContainer,
         ),
       ),
-      child: Center(
-        child: Tapper(
-          onTap: onTap,
-          borderRadius: BorderRadius.circular(50),
-          child: SvgPicture.asset(
-            icon,
-            colorFilter: ColorFilter.mode(
-              Theme.of(context).colorScheme.onSurface,
-              BlendMode.srcIn,
-            ),
+      child: Tapper(
+        onTap: onTap,
+        borderRadius: BorderRadius.circular(50),
+        child: SvgPicture.asset(
+          icon,
+          fit: BoxFit.scaleDown,
+          colorFilter: ColorFilter.mode(
+            Theme.of(context).colorScheme.onSurface,
+            BlendMode.srcIn,
           ),
         ),
       ),

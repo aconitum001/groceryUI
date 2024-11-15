@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:gorcery/models/product_model.dart';
 import 'package:gorcery/utils/app_styles.dart';
 
-class BestSellerWidget extends StatelessWidget {
-  const BestSellerWidget({
+class ProductDisplayWidget extends StatelessWidget {
+  const ProductDisplayWidget({
     super.key,
     required this.product,
   });

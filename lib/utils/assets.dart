@@ -93,5 +93,13 @@ class Assets {
   /// Assets for assetsImagesSearchIcon
   /// assets/images/search_icon.svg
   static const String assetsImagesSearchIcon = "assets/images/search_icon.svg";
+
+  /// Assets for assetsImagesSpinach
+  /// assets/images/Spinach.png
+  static const String assetsImagesSpinach = "assets/images/Spinach.png";
+
+  /// Assets for assetsImagesTomato
+  /// assets/images/tomato.png
+  static const String assetsImagesTomato = "assets/images/tomato.png";
 }
 

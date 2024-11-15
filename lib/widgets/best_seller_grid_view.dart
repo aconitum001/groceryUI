@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
-import 'package:gorcery/utils/constants.dart';
+import 'package:gorcery/utils/data_dummies.dart';
 import 'package:gorcery/widgets/best_seller_widget.dart';
 
 class BestSellerGridView extends StatelessWidget {
   const BestSellerGridView({super.key});
 
-  static List<BestSellerWidget> items = bestSellerList
+  static List<ProductDisplayWidget> items = bestSellerList
       .map(
-        (product) => BestSellerWidget(product: product),
+        (product) => ProductDisplayWidget(product: product),
       )
       .toList();
 
@@ -17,6 +17,7 @@ class BestSellerGridView extends StatelessWidget {
       padding: const EdgeInsets.symmetric(horizontal: 24),
       child: GridView.builder(
         shrinkWrap: true,
+        physics: const NeverScrollableScrollPhysics(),
         gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
           crossAxisCount: 2,
           childAspectRatio: 163 / 214,
