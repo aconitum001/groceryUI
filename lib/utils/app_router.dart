@@ -29,7 +29,7 @@ abstract class AppRouter {
       GetPage(
         name: categoryView,
         page: () => const CategoryView(),
-        transition: Transition.fadeIn,
+        transition: Transition.size,
       ),
     ];
   }

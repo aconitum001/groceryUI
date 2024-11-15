@@ -1,38 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:gorcery/controllers/search_controller.dart';
 import 'package:gorcery/models/product_model.dart';
 import 'package:gorcery/widgets/categories_grid_view.dart';
 import 'package:gorcery/widgets/custom_category_appbar.dart';
 import 'package:gorcery/widgets/search_text_field.dart';
-
-class SearchController extends GetxController {
-  RxBool isSearching = false.obs;
-  RxList<Product> searchingList = <Product>[].obs;
-  final TextEditingController textEditingController = TextEditingController();
-
-  void initSearchingList(List<Product> items) {
-    searchingList.clear();
-    searchingList.addAll(items); // Initialize the list
-  }
-
-  void _toggleSearch() {
-    isSearching.value = !isSearching.value;
-    if (!isSearching.value) {
-      textEditingController.clear();
-    }
-  }
-
-  void searchMethod(String productName, List<Product> originalList) {
-    // Use the original list for filtering
-    searchingList.value = originalList.where((product) {
-      return product.title.toLowerCase().contains(productName.toLowerCase());
-    }).toList();
-  }
-
-  void dismissKeyboard() {
-    FocusScope.of(Get.context!).requestFocus(FocusNode());
-  }
-}
 
 class CategoryViewBody extends StatelessWidget {
   final List<Product> items;
@@ -40,7 +12,8 @@ class CategoryViewBody extends StatelessWidget {
 
   CategoryViewBody({super.key, required this.items, required this.title});
 
-  final SearchController searchController = Get.put(SearchController());
+  final SearchProductsController searchController =
+      Get.put(SearchProductsController());
 
   @override
   Widget build(BuildContext context) {
@@ -58,7 +31,7 @@ class CategoryViewBody extends StatelessWidget {
                 child: CustomCategoryAppbar(
                   title: title,
                   onTap: () {
-                    searchController._toggleSearch();
+                    searchController.toggleSearch();
                     searchController.initSearchingList(items);
                     searchController.dismissKeyboard();
                   },
