@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:gorcery/utils/data_dummies.dart';
-import 'package:gorcery/widgets/best_seller_widget.dart';
+import 'package:gorcery/widgets/product_widget.dart';
 
 class BestSellerGridView extends StatelessWidget {
   const BestSellerGridView({super.key});

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:gorcery/models/product_model.dart';
-import 'package:gorcery/widgets/best_seller_widget.dart';
+import 'package:gorcery/widgets/product_widget.dart';
 
 class CategoriesGridView extends StatelessWidget {
   const CategoriesGridView({super.key, required this.items});

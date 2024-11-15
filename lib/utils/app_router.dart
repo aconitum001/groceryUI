@@ -2,6 +2,7 @@ import 'package:get/get.dart';
 import 'package:gorcery/views/category_view.dart';
 import 'package:gorcery/views/home_view.dart';
 import 'package:gorcery/views/intro_view.dart';
+import 'package:gorcery/views/product_details_view.dart';
 import 'package:gorcery/views/splash_view.dart';
 
 abstract class AppRouter {
@@ -9,6 +10,7 @@ abstract class AppRouter {
   static const String introView = "/intro";
   static const String homeView = "/home";
   static const String categoryView = "/category";
+  static const String prodcutDetailsView = "/productDetails";
 
   static List<GetPage<dynamic>>? getViews() {
     return [
@@ -29,6 +31,11 @@ abstract class AppRouter {
       GetPage(
         name: categoryView,
         page: () => const CategoryView(),
+        transition: Transition.size,
+      ),
+      GetPage(
+        name: prodcutDetailsView,
+        page: () => const ProductDetailsView(),
         transition: Transition.size,
       ),
     ];
