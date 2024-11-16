@@ -48,4 +48,8 @@ class CartController extends GetxController {
     }
     return 0;
   }
+
+  void checkOut() {
+    cartItems.clear();
+  }
 }

@@ -86,16 +86,17 @@ class ProductDisplayWidget extends StatelessWidget {
                       cartController.addItem(product);
                       Get.snackbar(
                         "Product Added to Cart!",
-                        "1 item of ${product.title} has been successfully added to your cart. Keep shopping or proceed to checkout!", // Message content
-                        snackPosition: SnackPosition
-                            .TOP, // Position of the Snackbar (TOP or BOTTOM)
+                        "1x ${product.title} added to your cart. Keep shopping or checkout!", // Message content
+                        snackPosition: SnackPosition.BOTTOM,
                         backgroundColor: Theme.of(context).colorScheme.primary,
                         colorText: Colors.white,
                         borderRadius: 8,
                         margin: const EdgeInsets.all(10),
                         duration: const Duration(
-                          seconds: 3,
+                          seconds: 2,
                         ),
+                        showProgressIndicator: true,
+                        isDismissible: true,
                         icon: const Icon(
                           Icons.check_circle_outlined,
                           color: Colors.white,
