@@ -242,3 +242,86 @@ List<Product> fruits = [
     price: 3.0,
   ),
 ];
+
+List<Product> dairyProductList = [
+  const Product(
+    amount: 1,
+    title: "Milk",
+    desc:
+        "Milk is a nutrient-rich beverage packed with calcium, protein, and vitamins, essential for strong bones and overall health.",
+    organicPercentage: 95,
+    reviews: 4.7, // of 5
+    numberOfReviews: 567,
+    cal: 42, // per 100 gram
+    expiration: 1, // year
+    image: Assets.assetsImagesMilk,
+    price: 3,
+  ),
+  const Product(
+    amount: 1,
+    title: "Cheddar Cheese",
+    desc:
+        "Cheddar cheese is a popular, firm cheese with a sharp flavor, rich in protein, calcium, and fat.",
+    organicPercentage: 80,
+    reviews: 4.8, // of 5
+    numberOfReviews: 298,
+    cal: 400, // per 100 gram
+    expiration: 0.8, // year
+    image: Assets.assetsImagesCheddarCheese,
+    price: 6,
+  ),
+  const Product(
+    amount: 1,
+    title: "Yogurt",
+    desc:
+        "Yogurt is a probiotic-rich dairy product, great for digestion, immune support, and a good source of calcium.",
+    organicPercentage: 85,
+    reviews: 4.5, // of 5
+    numberOfReviews: 430,
+    cal: 59, // per 100 gram
+    expiration: 0.5, // year
+    image: Assets.assetsImagesYogurt,
+    price: 2,
+  ),
+  const Product(
+    amount: 1,
+    title: "Butter",
+    desc:
+        "Butter is made from cream and adds rich flavor and texture to a wide range of dishes, from baking to frying.",
+    organicPercentage: 90,
+    reviews: 4.9, // of 5
+    numberOfReviews: 215,
+    cal: 717, // per 100 gram
+    expiration: 0.6, // year
+    image: Assets.assetsImagesButter,
+    price: 5,
+  ),
+  const Product(
+    amount: 1,
+    title: "Cottage Cheese",
+    desc:
+        "Cottage cheese is a soft, creamy cheese that's high in protein and low in fat, perfect for healthy snacking or in salads.",
+    organicPercentage: 70,
+    reviews: 4.4, // of 5
+    numberOfReviews: 120,
+    cal: 98, // per 100 gram
+    expiration: 0.3, // year
+    image: Assets.assetsImagesCottageCheese,
+    price: 3.5,
+  ),
+  const Product(
+    amount: 1,
+    title: "Sour Cream",
+    desc:
+        "Sour cream is a tangy dairy product made from fermented cream, often used as a topping or in recipes for its creamy consistency.",
+    organicPercentage: 80,
+    reviews: 4.4, // of 5
+    numberOfReviews: 180,
+    cal: 206, // per 100 gram
+    expiration: 0.4, // year
+    image: Assets.assetsImagesSourCream,
+    price: 3.7,
+  ),
+];
+
+

@@ -67,7 +67,7 @@ class CateogrySection extends StatelessWidget {
                     AppRouter.categoryView,
                     arguments: CategoryArgumentsModel(
                       title: "Diary",
-                      items: [],
+                      items: dairyProductList,
                     ),
                   );
                 },
