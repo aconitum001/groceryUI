@@ -16,7 +16,6 @@ class CateogrySection extends StatelessWidget {
       children: [
         const HomeHeader(
           title: 'Categories',
-          img: Assets.assetsImagesFaceSavoringFood,
         ),
         const SizedBox(
           height: 16,
@@ -61,12 +60,12 @@ class CateogrySection extends StatelessWidget {
               flex: 5,
               child: CategoryWidget(
                 image: Assets.assetsImagesCheese,
-                title: "Diary",
+                title: "Dairy",
                 onTap: () {
                   Get.toNamed(
                     AppRouter.categoryView,
                     arguments: CategoryArgumentsModel(
-                      title: "Diary",
+                      title: "Dairy",
                       items: dairyProductList,
                     ),
                   );

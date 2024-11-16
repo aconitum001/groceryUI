@@ -6,10 +6,9 @@ class HomeHeader extends StatelessWidget {
   const HomeHeader({
     super.key,
     required this.title,
-    required this.img,
   });
 
-  final String title, img;
+  final String title;
 
   @override
   Widget build(BuildContext context) {
@@ -21,9 +20,6 @@ class HomeHeader extends StatelessWidget {
             context,
             Theme.of(context).colorScheme.onSurface,
           ),
-        ),
-        Image.asset(
-          img,
         ),
         const Spacer(),
         Tapper(

@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:gorcery/utils/assets.dart';
 import 'package:gorcery/widgets/best_seller_grid_view.dart';
 import 'package:gorcery/widgets/home_header.dart';
 
@@ -14,7 +13,6 @@ class BestSellerSection extends StatelessWidget {
           padding: EdgeInsets.symmetric(horizontal: 24),
           child: HomeHeader(
             title: "Best Selling",
-            img: Assets.assetsImagesFire,
           ),
         ),
         SizedBox(

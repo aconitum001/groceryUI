@@ -16,37 +16,35 @@ class CategoryWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return FittedBox(
-      fit: BoxFit.scaleDown,
-      child: Column(
-        children: [
-          Tapper(
-            onTap: onTap,
-            borderRadius: BorderRadius.circular(50),
-            child: Container(
-              width: 73,
-              height: 73,
-              decoration: BoxDecoration(
-                color: Theme.of(context).colorScheme.secondaryContainer,
-                shape: BoxShape.circle,
-              ),
-              child: Image.asset(
-                image,
-              ),
+    return Column(
+      children: [
+        Tapper(
+          onTap: onTap,
+          borderRadius: BorderRadius.circular(50),
+          child: Container(
+            width: 73,
+            height: 73,
+            decoration: BoxDecoration(
+              color: Theme.of(context).colorScheme.secondaryContainer,
+              shape: BoxShape.circle,
+            ),
+            child: Image.asset(
+              image,
             ),
           ),
-          const SizedBox(
-            height: 8,
+        ),
+        const SizedBox(
+          height: 8,
+        ),
+        Text(
+          title,
+          style: AppStyles.style14medium(
+            context,
+            Theme.of(context).colorScheme.onSurface,
           ),
-          Text(
-            title,
-            style: AppStyles.style14medium(
-              context,
-              Theme.of(context).colorScheme.onSurface,
-            ),
-          ),
-        ],
-      ),
+          overflow: TextOverflow.ellipsis,
+        ),
+      ],
     );
   }
 }

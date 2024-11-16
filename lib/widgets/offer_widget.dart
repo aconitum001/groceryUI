@@ -51,9 +51,10 @@ class OfferWidget extends StatelessWidget {
                   alignment: Alignment.center,
                   child: Padding(
                     padding: const EdgeInsets.symmetric(
-                      horizontal: 10,
+                      horizontal: 25,
                     ),
                     child: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         Text(
                           "Ramadan Offers",
@@ -83,7 +84,8 @@ class OfferWidget extends StatelessWidget {
                                 vertical: 5,
                               ),
                             ),
-                            child: IntrinsicWidth(
+                            child: FittedBox(
+                              fit: BoxFit.scaleDown,
                               child: Row(
                                 children: [
                                   Text(
