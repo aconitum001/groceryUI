@@ -4,6 +4,7 @@ import 'package:gorcery/controllers/search_controller.dart';
 import 'package:gorcery/models/product_model.dart';
 import 'package:gorcery/widgets/categories_grid_view.dart';
 import 'package:gorcery/widgets/custom_category_appbar.dart';
+import 'package:gorcery/widgets/empty_transaction_widget.dart';
 import 'package:gorcery/widgets/search_text_field.dart';
 
 class CategoryViewBody extends StatelessWidget {
@@ -66,12 +67,22 @@ class CategoryViewBody extends StatelessWidget {
         SliverPadding(
           padding: const EdgeInsets.symmetric(horizontal: 24),
           sliver: Obx(
-            () => CategoriesGridView(
-              items: searchController.isSearching.value
-                  // ignore: invalid_use_of_protected_member
-                  ? searchController.searchingList.value
-                  : items,
-            ),
+            () => searchController.isSearching.value &&
+                    searchController.searchingList.isEmpty
+                ? const SliverFillRemaining(
+                    child: EmptyWidget(
+                      icon: Icons.search_off,
+                      title: "Product Not Found",
+                      subtTitle:
+                          "We couldn't find any results for your search. Try a different keyword!",
+                    ),
+                  )
+                : CategoriesGridView(
+                    items: searchController.isSearching.value
+                        // ignore: invalid_use_of_protected_member
+                        ? searchController.searchingList.value
+                        : items,
+                  ),
           ),
         ),
         const SliverToBoxAdapter(

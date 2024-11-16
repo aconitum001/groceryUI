@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
 import 'package:gorcery/utils/app_styles.dart';
 import 'package:gorcery/utils/assets.dart';
 import 'package:gorcery/widgets/app_bar_button.dart';
@@ -14,7 +13,7 @@ class CustomCartViewAppBar extends StatelessWidget {
         AppBarButton(
           icon: Assets.assetsImagesArrowBack,
           onTap: () {
-            Get.back();
+            Navigator.pop(context);
           },
         ),
         const Spacer(),

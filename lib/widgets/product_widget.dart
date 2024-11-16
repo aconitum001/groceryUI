@@ -47,11 +47,15 @@ class ProductDisplayWidget extends StatelessWidget {
             const Spacer(
               flex: 4,
             ),
-            Text(
-              product.title,
-              style: AppStyles.style14bold(
-                context,
-                Theme.of(context).colorScheme.onSurface,
+            FittedBox(
+              fit: BoxFit.scaleDown,
+              alignment: Alignment.centerLeft,
+              child: Text(
+                product.title,
+                style: AppStyles.style14bold(
+                  context,
+                  Theme.of(context).colorScheme.onSurface,
+                ),
               ),
             ),
             const SizedBox(
@@ -63,6 +67,7 @@ class ProductDisplayWidget extends StatelessWidget {
                 Expanded(
                   child: FittedBox(
                     fit: BoxFit.scaleDown,
+                    alignment: Alignment.centerLeft,
                     child: Text(
                       "${product.amount}kg, ${product.price}\$",
                       style: AppStyles.style16bold(
@@ -72,7 +77,9 @@ class ProductDisplayWidget extends StatelessWidget {
                     ),
                   ),
                 ),
-                const Spacer(),
+                const SizedBox(
+                  width: 8,
+                ),
                 SizedBox(
                   height: 36,
                   width: 36,

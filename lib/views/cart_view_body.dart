@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:gorcery/controllers/cart_controller.dart';
-import 'package:gorcery/utils/app_styles.dart';
 import 'package:gorcery/views/custom_cart_view_app_bar.dart';
 import 'package:gorcery/widgets/cart_list_view.dart';
 import 'package:gorcery/widgets/custom_button.dart';
