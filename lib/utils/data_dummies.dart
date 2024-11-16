@@ -1,34 +1,6 @@
 import 'package:gorcery/models/product_model.dart';
 import 'package:gorcery/utils/assets.dart';
-
-List<Product> bestSellerList = [
-  const Product(
-    amount: 1,
-    title: "Bell Pepper Red",
-    desc:
-        "Red bell peppers are sweet, crunchy, and packed with vitamins, especially vitamin C and antioxidants.",
-    organicPercentage: 90,
-    reviews: 4.6, // of 5
-    numberOfReviews: 198,
-    cal: 31, // per 100 gram
-    expiration: 0.5, // year
-    image: Assets.assetsImagesPeper,
-    price: 4,
-  ),
-  const Product(
-    amount: 1,
-    title: "Lamb Meat",
-    desc:
-        "Lamb meat is a rich source of high-quality protein, essential vitamins, and minerals, known for its tender texture and savory flavor.",
-    organicPercentage: 85,
-    reviews: 4.9, // of 5
-    numberOfReviews: 312,
-    cal: 294, // per 100 gram
-    expiration: 0.2, // year (refrigerated)
-    image: Assets.assetsImagesLambMeat,
-    price: 45,
-  ),
-];
+import 'package:gorcery/utils/utils.dart';
 
 List<Product> vegetables = [
   const Product(
@@ -324,4 +296,59 @@ List<Product> dairyProductList = [
   ),
 ];
 
+List<Product> meatProductList = [
+  const Product(
+    amount: 1,
+    title: "Chicken Breast",
+    desc:
+        "Chicken breast is a lean source of protein, perfect for grilling, baking, or stir-frying. It's low in fat and high in essential vitamins.",
+    organicPercentage: 85,
+    reviews: 4.7, // of 5
+    numberOfReviews: 380,
+    cal: 165, // per 100 gram
+    expiration: 0.3, // year (refrigerated)
+    image: Assets.assetsImagesChickenBreast,
+    price: 7.2,
+  ),
+  const Product(
+    amount: 1,
+    title: "Beef Steak",
+    desc:
+        "Beef steak is a rich source of high-quality protein, iron, and zinc, known for its tender texture and juicy flavor.",
+    organicPercentage: 80,
+    reviews: 4.8, // of 5
+    numberOfReviews: 210,
+    cal: 250, // per 100 gram
+    expiration: 0.2, // year (refrigerated)
+    image: Assets.assetsImagesBeefSteak,
+    price: 15.5,
+  ),
+  const Product(
+    amount: 1,
+    title: "Pork Chops",
+    desc:
+        "Pork chops are tender cuts of pork, offering a great source of protein and flavor, ideal for grilling or pan-frying.",
+    organicPercentage: 75,
+    reviews: 4.5, // of 5
+    numberOfReviews: 150,
+    cal: 231, // per 100 gram
+    expiration: 0.4, // year (refrigerated)
+    image: Assets.assetsImagesPorkChops,
+    price: 8.3,
+  ),
+  const Product(
+    amount: 1,
+    title: "Lamb Chops",
+    desc:
+        "Lamb chops are tender cuts of lamb known for their rich, savory flavor, high in protein, and full of essential vitamins and minerals.",
+    organicPercentage: 90,
+    reviews: 4.9, // of 5
+    numberOfReviews: 120,
+    cal: 294, // per 100 gram
+    expiration: 0.3, // year (refrigerated)
+    image: Assets.assetsImagesLambChops,
+    price: 18.5,
+  ),
+];
 
+List<Product> bestSellerList = generateRandomBestSellerList();

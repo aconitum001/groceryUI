@@ -26,6 +26,10 @@ class Assets {
   /// assets/images/Basket.png
   static const String assetsImagesBasket = "assets/images/Basket.png";
 
+  /// Assets for assetsImagesBeefSteak
+  /// assets/images/beef_steak.png
+  static const String assetsImagesBeefSteak = "assets/images/beef_steak.png";
+
   /// Assets for assetsImagesBlueberries
   /// assets/images/blueberries.png
   static const String assetsImagesBlueberries = "assets/images/blueberries.png";
@@ -74,6 +78,10 @@ class Assets {
   /// assets/images/cheese.png
   static const String assetsImagesCheese = "assets/images/cheese.png";
 
+  /// Assets for assetsImagesChickenBreast
+  /// assets/images/chicken_breast.png
+  static const String assetsImagesChickenBreast = "assets/images/chicken_breast.png";
+
   /// Assets for assetsImagesCorn
   /// assets/images/corn.png
   static const String assetsImagesCorn = "assets/images/corn.png";
@@ -109,6 +117,10 @@ class Assets {
   /// Assets for assetsImagesIntroBackground
   /// assets/images/Intro_background.png
   static const String assetsImagesIntroBackground = "assets/images/Intro_background.png";
+
+  /// Assets for assetsImagesLambChops
+  /// assets/images/lamb_chops.png
+  static const String assetsImagesLambChops = "assets/images/lamb_chops.png";
 
   /// Assets for assetsImagesLambMeat
   /// assets/images/lamb_meat.png
@@ -161,6 +173,10 @@ class Assets {
   /// Assets for assetsImagesPineapple
   /// assets/images/pineapple.png
   static const String assetsImagesPineapple = "assets/images/pineapple.png";
+
+  /// Assets for assetsImagesPorkChops
+  /// assets/images/pork_chops.png
+  static const String assetsImagesPorkChops = "assets/images/pork_chops.png";
 
   /// Assets for assetsImagesRedApple
   /// assets/images/red_apple.png
