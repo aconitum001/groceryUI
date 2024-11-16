@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
+import 'package:gorcery/controllers/cart_controller.dart';
 import 'package:gorcery/utils/app_router.dart';
 import 'package:gorcery/utils/app_styles.dart';
 import 'package:gorcery/utils/assets.dart';
@@ -28,6 +29,7 @@ class _MainViewState extends State<MainView> {
 
   final PageStorageBucket bucket = PageStorageBucket();
   Widget currentScreen = const HomeView();
+  final CartController cartController = Get.find();
 
   @override
   Widget build(BuildContext context) {
@@ -54,29 +56,33 @@ class _MainViewState extends State<MainView> {
               ),
             ),
           ),
-          Positioned(
-            bottom: -10,
-            left: 13,
-            child: Container(
-              width: 18,
-              height: 18,
-              decoration: BoxDecoration(
-                color: Theme.of(context).colorScheme.secondary,
-                shape: BoxShape.circle,
-                border: Border.all(
-                  color: Colors.white,
-                ),
-              ),
-              child: FittedBox(
-                fit: BoxFit.scaleDown,
-                child: Text(
-                  "4",
-                  style: AppStyles.style14medium(
-                    context,
-                    Colors.white,
-                  ),
-                ),
-              ),
+          Obx(
+            () => Positioned(
+              bottom: -10,
+              left: 13,
+              child: cartController.cartItems.isNotEmpty
+                  ? Container(
+                      width: 18,
+                      height: 18,
+                      decoration: BoxDecoration(
+                        color: Theme.of(context).colorScheme.secondary,
+                        shape: BoxShape.circle,
+                        border: Border.all(
+                          color: Colors.white,
+                        ),
+                      ),
+                      child: FittedBox(
+                        fit: BoxFit.scaleDown,
+                        child: Text(
+                          cartController.cartItems.length.toString(),
+                          style: AppStyles.style14medium(
+                            context,
+                            Colors.white,
+                          ),
+                        ),
+                      ),
+                    )
+                  : const SizedBox(),
             ),
           ),
         ],

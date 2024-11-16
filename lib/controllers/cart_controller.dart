@@ -14,7 +14,7 @@ class CartController extends GetxController {
         } else {
           cartItemModel.productCount += count;
         }
-
+        cartItems.refresh();
         return;
       }
     }
@@ -33,6 +33,7 @@ class CartController extends GetxController {
         if (cartItemModel.productCount == 0) {
           cartItems.remove(cartItemModel);
         }
+        cartItems.refresh();
         return;
       }
     }

@@ -9,23 +9,22 @@ class CartListView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    List<CartItemWidget> items = cartController.cartItems
-        .map(
-          (element) => CartItemWidget(
-            cartItemModel: element,
-          ),
-        )
-        .toList();
     return Expanded(
-      child: ListView.separated(
-        itemBuilder: (context, index) => Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 24),
-          child: items[index],
-        ),
-        itemCount: items.length,
-        separatorBuilder: (context, index) => Divider(
-          height: 30,
-          color: Theme.of(context).colorScheme.secondaryContainer,
+      child: Obx(
+        () => ListView.separated(
+          itemBuilder: (context, index) => Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 24),
+            child: cartController.cartItems
+                .map(
+                  (element) => CartItemWidget(cartItemModel: element),
+                )
+                .toList()[index],
+          ),
+          itemCount: cartController.cartItems.length,
+          separatorBuilder: (context, index) => Divider(
+            height: 30,
+            color: Theme.of(context).colorScheme.secondaryContainer,
+          ),
         ),
       ),
     );

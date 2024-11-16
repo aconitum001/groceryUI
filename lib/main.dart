@@ -24,6 +24,7 @@ class Grocery extends StatelessWidget {
   Widget build(BuildContext context) {
     return GetMaterialApp(
       debugShowCheckedModeBanner: false,
+      title: 'Grocery',
       locale: DevicePreview.locale(context),
       builder: DevicePreview.appBuilder,
       initialRoute: '/',
